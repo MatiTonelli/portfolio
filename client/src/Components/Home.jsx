@@ -29,13 +29,13 @@ export default function Home() {
   const bg = useColorModeValue('#FFDAAC', '#1A202C');
   const foto = useColorModeValue(fotoLight, fotoDark);
   const circles = useColorModeValue('#ECCCB2', '#98467B');
-  const bgFoto = useColorModeValue(
+  /* const bgFoto = useColorModeValue(
     'radial-gradient(circle, #fff6ea, #ffefda, #ffe8cb, #ffe1bb, #ffdaac);',
     'radial-gradient(circle, #ffffff, #fef4fd, #ffe8ef, #ffded7, #ffd9bb, #ffdcb4, #ffdfad, #ffe3a7, #ffe7b8, #ffecc9, #fff1d9, #fff6ea)'
-  );
+  ); */
   return (
     <Box bgColor={bg}>
-      <Flex h={'93vh'} justify="center" alignItems="center" bg={bgFoto}>
+      <Flex h={'93vh'} justify="center" alignItems="center" /* bg={bgFoto} */>
         <Image src={foto} zIndex={10} w="30vw" />
         <Circle
           border="1px solid black"
