@@ -40,9 +40,22 @@ const CONFETTI_DARK = '#98467B'//`url("data:image/svg+xml,%3Csvg xmlns='http://w
 export default function ContactFormWithSocialButtons() {
   const { hasCopied, onCopy } = useClipboard("matias.tonelli@outlook.com");
   const [input, setInput] = useState({})
+  const [error, setError] = useState({})
 
-  const handleChange = (e) =>  {
-    
+  const handleNameChange = (e) =>  {
+    setInput({...input, name: e.target.value})
+  }
+
+  const handleEmailChange = (e) =>  {
+    setInput({...input, email: e.target.value})
+  }
+
+  const handleMessageChange = (e) =>  {
+    setInput({...input, message: e.target.value})
+  }
+
+  const handleSubmit = () => {
+
   }
 
   return (
