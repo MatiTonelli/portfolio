@@ -149,7 +149,7 @@ export default function ContactFormWithSocialButtons() {
                   />
                 </Tooltip>
 
-                <Link href="#">
+                <Link href="https://github.com/MatiTonelli" target="_blank">
                   <IconButton
                     aria-label="github"
                     variant="ghost"
@@ -164,7 +164,7 @@ export default function ContactFormWithSocialButtons() {
                   />
                 </Link>
 
-                <Link href="#">
+                <Link href="https://twitter.com/matias_tonelli" target="_blank">
                   <IconButton
                     aria-label="twitter"
                     variant="ghost"
@@ -178,7 +178,7 @@ export default function ContactFormWithSocialButtons() {
                   />
                 </Link>
 
-                <Link href="#">
+                <Link href="https://www.linkedin.com/in/matias-tonelli/" target="_blank">
                   <IconButton
                     aria-label="linkedin"
                     variant="ghost"
@@ -210,7 +210,7 @@ export default function ContactFormWithSocialButtons() {
                         <Input
                           type="text"
                           name="name"
-                          placeholder="Tu nombre"
+                          placeholder="Your name"
                           onChange={handleChange}
                           value={input.name}
                         />
@@ -228,7 +228,7 @@ export default function ContactFormWithSocialButtons() {
                         <Input
                           type="email"
                           name="email"
-                          placeholder="Tu correo"
+                          placeholder="Your email"
                           onChange={handleChange}
                           value={input.email}
                         />
@@ -243,7 +243,7 @@ export default function ContactFormWithSocialButtons() {
 
                       <Textarea
                         name="message"
-                        placeholder="Tu mensaje"
+                        placeholder="Your message"
                         rows={6}
                         resize="none"
                         onChange={handleChange}

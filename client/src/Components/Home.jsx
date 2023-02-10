@@ -30,6 +30,18 @@ import postgresIcon from "../Assets/postgres.png";
 import scrumIcon from "../Assets/scrum.png";
 import gitIconRepo from "../Assets/githubLink.png";
 import enlace from "../Assets/enlace.png";
+import fondoNegro from "../Assets/fondoPuntosNegros.png";
+import fondoBlanco from "../Assets/fondoPuntosBlancos.png";
+import fondoLineasFinasNegrasIzquierda from "../Assets/fondoLineasFinasNegrasIzquierda.png";
+import fondoLineasFinasBlancasIzquierda from "../Assets/fondoLineasFinasBlancasIzquierda.png";
+import portBgDark from "../Assets/portBgDark.png";
+import portBgLight from '../Assets/portBgLight.png'
+import skillsBgD from '../Assets/skillsBgD.png'
+import skillsBgL from '../Assets/skillsBgL.png'
+import contactBgD from '../Assets/contactBgD.png'
+import contactBgL from '../Assets/contactBgL.png'
+import Footer from "./Footer";
+
 
 import ContactFormWithSocialButtons from "./ContactFormWithSocialButtons";
 
@@ -38,14 +50,23 @@ export default function Home() {
   const foto = useColorModeValue(fotoLight, fotoDark);
   const circles = useColorModeValue("#ECCCB2", "#98467B");
   const colorSquares = useColorModeValue("#fccd92", "#28334a");
-  /* const bgFoto = useColorModeValue(
-    'radial-gradient(circle, #fff6ea, #ffefda, #ffe8cb, #ffe1bb, #ffdaac);',
-    'radial-gradient(circle, #ffffff, #fef4fd, #ffe8ef, #ffded7, #ffd9bb, #ffdcb4, #ffdfad, #ffe3a7, #ffe7b8, #ffecc9, #fff1d9, #fff6ea)'
-  ); */
+  const bgFoto = useColorModeValue(fondoNegro, fondoBlanco);
+  const bgPort = useColorModeValue(portBgDark, portBgLight);
+  const bgNav = useColorModeValue('rgb(255,206,222)', 'rgb(159, 115, 171)')
+  const skillsBg = useColorModeValue(skillsBgD, skillsBgL);
+  const contactBg = useColorModeValue(contactBgD, contactBgL);
+  const fondoLineasFinas = useColorModeValue(fondoLineasFinasNegrasIzquierda, fondoLineasFinasBlancasIzquierda)
   return (
-    <Box bgColor={bg}>
-      <Flex h={"93vh"} justify="center" alignItems="center" /* bg={bgFoto} */>
-        <Image src={foto} zIndex={10} w="30vw" />
+    <Box bgColor={bg} scrollBehavior='smooth'>
+      <Flex
+        h={"100vh"}
+        justify="center"
+        alignItems="center"
+        bgImage={bgFoto}
+        backgroundSize="cover"
+        mt="-7vh"
+      >
+        <Image src={foto} zIndex={7} w="30vw" />
         <Circle
           border="1px solid black"
           ml="-7vw"
@@ -54,7 +75,7 @@ export default function Home() {
           w="50vw"
           bg={circles}
           borderRadius="100%"
-          zIndex={11}
+          zIndex={8}
           flexDirection={"column"}
         >
           <Text fontFamily="Montserrat" fontSize={"2.5vw"} as="i">
@@ -72,11 +93,14 @@ export default function Home() {
         </Circle>
       </Flex>
       <Flex
-        h={"93vh"}
+        h={"100vh"}
         direction="column"
         alignItems={"center"}
         borderTop="1px"
         justifyContent={"center"}
+        id="about"
+        bgImage={fondoLineasFinas}
+        backgroundSize="cover"
       >
         <Text
           fontFamily="Montserrat"
@@ -97,11 +121,11 @@ export default function Home() {
           w="60vw"
           bg={circles}
           borderRadius="100%"
-          zIndex={11}
+          zIndex={8}
           flexDirection={"column"}
           fontFamily="Montserrat"
         >
-          <Text fontSize="1vw" w={"63%"} align="center" as='kbd'>
+          <Text fontSize="1vw" w={"63%"} align="center" as="kbd">
             Hi! I'm Matias, I'm 24 years old, I recently graduated from Henry's
             Full-Stack Bootcamp and looking for job. Before I entered the
             bootcamp I been studying the career of Computer engineering in the
@@ -111,7 +135,7 @@ export default function Home() {
             programming. I want to keep learning more and more about this field,
             currently doing it.
           </Text>
-          <Text fontSize="1vw" w={"70%"} align="center" as='kbd'>
+          <Text fontSize="1vw" w={"70%"} align="center" as="kbd">
             See yah'!
           </Text>
         </Circle>
@@ -121,15 +145,18 @@ export default function Home() {
         direction="column"
         alignItems={"center"}
         borderTop="1px"
+        id="portfolio"
+        bgImage={bgPort}
+        backgroundSize="cover"
       >
         <Text
           fontFamily="Montserrat"
           fontSize={"1.5vw"}
-          marginY="5vh"
+          marginY="10vh"
           fontWeight={700}
           as="i"
         >
-          My projects
+          My portfolio
         </Text>
         <Flex
           fontFamily="Montserrat"
@@ -157,7 +184,7 @@ export default function Home() {
                 Kinema Entertainment
               </Text>
               <Text fontSize={"0.8vw"} fontFamily="Montserrat">
-                Peliculas y series
+                Movies and series
               </Text>
               <br />
               <Divider orientation="horizontal" borderColor="black" w={"70%"} />
@@ -168,8 +195,8 @@ export default function Home() {
                 maxW="65%"
                 fontFamily={"Roboto"}
               >
-                Desarrollo de una App de contenido multimedia que incluye:
-                sistema de usuarios, pasarela de pagos y filtrados.
+                Development of a multimedia content App that includes: user
+                system, payment gateway and filtering.
               </Text>
               <br />
               <Divider orientation="horizontal" borderColor="black" w={"70%"} />
@@ -198,7 +225,7 @@ export default function Home() {
                 WCFixture
               </Text>
               <Text fontSize={"0.8vw"} fontFamily="Montserrat">
-                Futbol y apuestas
+                Football and bets
               </Text>
               <br />
               <Divider orientation="horizontal" borderColor="black" w={"70%"} />
@@ -209,8 +236,8 @@ export default function Home() {
                 maxW="65%"
                 fontFamily={"Roboto"}
               >
-                App de apuestas sobre el mundial de futbol que incluye: sistema
-                de usuarios, ranking de puntos y filtrados.
+                Football World Cup betting app that includes: user system,
+                ranking points and filtering.
               </Text>
               <br />
               <Divider orientation="horizontal" borderColor="black" w={"70%"} />
@@ -239,7 +266,7 @@ export default function Home() {
                 findYourActivity
               </Text>
               <Text fontSize={"0.8vw"} fontFamily="Montserrat">
-                Paises y turismo
+                Countries and tourism
               </Text>
               <br />
               <Divider orientation="horizontal" borderColor="black" w={"70%"} />
@@ -250,8 +277,8 @@ export default function Home() {
                 maxW="65%"
                 fontFamily={"Roboto"}
               >
-                Desarrollo de una App de paises y actividades turisticas que
-                incluye: filtrados, ordenamientos y creacion de tareas.
+                Development of an App of countries and tourist activities which
+                includes: filtering, sorting and task creation.
               </Text>
               <br />
               <Divider orientation="horizontal" borderColor="black" w={"70%"} />
@@ -282,11 +309,14 @@ export default function Home() {
         direction="column"
         alignItems={"center"}
         borderTop="1px"
+        id="skills"
+        bgImage={skillsBg}
+        backgroundSize="cover"
       >
         <Text
           fontFamily="Montserrat"
           fontSize={"1.5vw"}
-          my="5vh"
+          my="10vh"
           fontWeight={700}
           as="i"
         >
@@ -414,10 +444,10 @@ export default function Home() {
               <Text align={"center"} fontSize="1vw" fontWeight={600} mb="1vw">
                 Soft Skills:
               </Text>
-              <Text fontWeight={500}> - Adaptabilidad</Text>
-              <Text fontWeight={500}> - Análisis de problemas</Text>
-              <Text fontWeight={500}> - Actitud positiva</Text>
-              <Text fontWeight={500}> - Automotivación</Text>
+              <Text fontWeight={500}> - Adaptability</Text>
+              <Text fontWeight={500}> - Problem analysis</Text>
+              <Text fontWeight={500}> - Positive attitude</Text>
+              <Text fontWeight={500}> - Self-motivation</Text>
             </Box>
             <Box
               border={"1px"}
@@ -439,15 +469,19 @@ export default function Home() {
         </Flex>
       </Flex>
       <Flex
-        h={"100vh"}
+        h={"120vh"}
         direction="column"
         alignItems={"center"}
         borderTop="1px"
+        id="contact"
+        bgImage={contactBg}
+        backgroundSize='cover'
+        backgroundPosition={'center'}
       >
         <Text
           fontFamily="Montserrat"
           fontSize={"1.5vw"}
-          my="5vh"
+          my="10vh"
           fontWeight={700}
           as="i"
         >
