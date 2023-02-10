@@ -17,7 +17,7 @@ import {
 import { BsGithub, BsLinkedin, BsPerson, BsTwitter } from "react-icons/bs";
 
 export default function Footer() {
-    const bg = useColorModeValue("linear-gradient(0deg, rgba(252, 229, 209, 1) 79%, rgba(252, 229, 209,0.8) 90%, rgba(252, 229, 209, 0.7) 93%, rgba(252, 229, 209, 0.6) 96%, rgba(252, 229, 209,0.3) 98%, rgba(252, 229, 209, 0.2) 100%, rgba(252, 229, 209, 0) 100%);", "linear-gradient(0deg, rgba(30,30,50,1) 79%, rgba(30,30,50,0.8) 90%, rgba(30,30,50,0.7) 93%, rgba(30,30,50,0.6) 96%, rgba(30,30,50,0.3) 98%, rgba(30,30,50,0.2) 100%, rgba(30,30,50,0) 100%);" )
+    const bg = useColorModeValue("linear-gradient(0deg, rgba(238, 202, 171, 1) 79%, rgba(238, 202, 171 ,0.8) 90%, rgba(238, 202, 171, 0.7) 93%, rgba(238, 202, 171, 0.6) 96%, rgba(238, 202, 171, 0.3) 98%, rgba(238, 202, 171, 0.2) 100%, rgba(238, 202, 171, 0) 100%);", "linear-gradient(0deg, rgba(30,30,50,1) 79%, rgba(30,30,50,0.8) 90%, rgba(30,30,50,0.7) 93%, rgba(30,30,50,0.6) 96%, rgba(30,30,50,0.3) 98%, rgba(30,30,50,0.2) 100%, rgba(30,30,50,0) 100%);" )
     const dividerColor = useColorModeValue('black', 'white')
     return (
     <Box
